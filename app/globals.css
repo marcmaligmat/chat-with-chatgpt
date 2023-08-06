@@ -16,12 +16,31 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* This is the scrollbar track (the background) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* This is the handle (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #f15a59;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ed2b2a;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and newer versions of Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat-response p {
+  @apply pb-7;
 }
