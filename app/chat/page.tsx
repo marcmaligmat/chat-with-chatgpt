@@ -35,7 +35,7 @@ function ChatMessage({ message }: any) {
         <Markdown
           options={{
             // forceBlock: true,
-            // disableParsingRawHTML: true,
+            disableParsingRawHTML: true,
             overrides: {
               code: {
                 component: Code,
