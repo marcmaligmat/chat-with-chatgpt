@@ -7,6 +7,7 @@ import { TextField, InputAdornment } from "@mui/material";
 
 import SendIcon from "@mui/icons-material/Send";
 import Markdown from "markdown-to-jsx";
+
 import { useChat } from "ai/react";
 
 import Code from "./Code";
@@ -33,8 +34,8 @@ function ChatMessage({ message }: any) {
       /> */}
         <Markdown
           options={{
-            forceBlock: true,
-            disableParsingRawHTML: true,
+            // forceBlock: true,
+            // disableParsingRawHTML: true,
             overrides: {
               code: {
                 component: Code,

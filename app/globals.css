@@ -44,3 +44,20 @@
 .chat-response p {
   @apply pb-7;
 }
+
+.no-tailwind,
+.no-tailwind * {
+  all: unset;
+}
+
+.chat-response ol {
+  list-style-type: number; /* Remove default bullets */
+  counter-reset: itemCounter; /* Initialize a counter named itemCounter */
+  padding-left: 0;
+}
+
+.chat-response ol li {
+  counter-increment: itemCounter; /* Increment the counter */
+  content: counter(itemCounter) ". "; /* Display the counter value followed by a period */
+  margin-right: 10px; /* Spacing between the number and list item content */
+}
