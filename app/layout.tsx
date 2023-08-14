@@ -6,6 +6,8 @@ import NavBar from "@components/layout/NavBar";
 import ThemeRegistry from "@components/ThemeRegistry/ThemeRegistry";
 import { Toaster } from "react-hot-toast";
 
+import { ThemeProvider } from "@/components/theme-provider-shadcn";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,8 +29,10 @@ export default function RootLayout({
           toastOptions={{ duration: 2000 }}
         />
         <ThemeRegistry>
-          <NavBar />
-          {children}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <NavBar />
+            {children}
+          </ThemeProvider>
         </ThemeRegistry>
       </body>
     </html>
